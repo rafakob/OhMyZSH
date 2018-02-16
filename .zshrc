@@ -72,8 +72,8 @@ autoload -U promptinit; promptinit
 prompt pure
 
 # Envs
-export ANDROID_HOME=/Users/rafal/Library/Android/sdk
-export PATH=/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/tools:/platform-tools:/Users/rafakob/Library/Android/sdk/tools:/Users/rafakob/Library/Android/sdk/platform-tools
+export ANDROID_HOME=/Users/$USER/Library/Android/sdk
+export PATH=${PATH}:$ANDROID_HOME/tools:$ANDROID_HOME/platform-tools
 
 # User configuration
 
@@ -101,5 +101,7 @@ export PATH=/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/tools:/platform-tools:
 # For a full list of active aliases, run `alias`.
 #
 # Example aliases
-alias zshconfig="cat ~/.zshrc"
-alias ohmyzsh="cat ~/.oh-my-zsh"
+alias zshconfig="vim ~/.zshrc"
+alias ohmyzsh="vim ~/.oh-my-zsh"
+alias zshreload="source ~/.zshrc"
+alias gitempty="git commit --allow-empty -m \"Empty commit\""
